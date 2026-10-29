@@ -44,7 +44,7 @@ DeepSeek Harness 的 QQ 频道（`@tencent-connect/dsh-qqbot`）默认把一整�
 cd ~/.dsh/profiles/desktop
 
 # 1. 把仓库放到 _plugins 下
-git clone https://github.com/<你的名字>/dsh-split-reply.git _plugins/dsh-split-reply
+git clone https://github.com/betty598/dsh-split-reply.git _plugins/dsh-split-reply
 
 # 2. 跑安装脚本：写 package.json、建软链、加配置
 node _plugins/dsh-split-reply/scripts/install.mjs "$PWD/_plugins/dsh-split-reply"
