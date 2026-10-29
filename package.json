@@ -1,0 +1,32 @@
+{
+  "name": "dsh-split-reply",
+  "version": "0.1.0",
+  "description": "让 QQ 那边的回复一句一句发：整段话按句号问号拆开，隔一两秒一条条送出去。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "qq",
+    "split"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
