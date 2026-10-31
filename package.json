@@ -1,6 +1,6 @@
 {
   "name": "dsh-split-reply",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "让 QQ 那边的回复一句一句发：整段话按句号问号拆开，隔一两秒一条条送出去。",
   "license": "MIT",
   "type": "module",

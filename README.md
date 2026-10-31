@@ -29,6 +29,14 @@ DeepSeek Harness 的 QQ 频道（`@tencent-connect/dsh-qqbot`）默认把一整�
 
 **不改官方包**，只包一层原型方法，`dsh-qqbot` 升级也不受影响。
 
+### 挂载丢了会自己补
+
+宿主重载时会把 `QQBot` 重新加载成新的一份类，旧的包层跟着旧类一起被丢掉，
+而 `apply` 不会因此再跑一次——不处理的话就从那一刻起静默不拆了（0.1.0 的坑）。
+
+0.1.1 起带自愈：每 5 秒探一眼原型上还有没有包层，没了就补上；真发消息时也会顺手补一次。
+纯本地判断，不花任何模型 token。
+
 ## 什么时候不拆
 
 - 带按钮/键盘的消息（提问卡片、审批按钮）
@@ -111,7 +119,7 @@ node _plugins/dsh-split-reply/scripts/install.mjs "$PWD/_plugins/dsh-split-reply
 ## 开发
 
 ```bash
-node --test test/split.test.js
+node --test 'test/*.test.js'
 ```
 
 ## 许可证
